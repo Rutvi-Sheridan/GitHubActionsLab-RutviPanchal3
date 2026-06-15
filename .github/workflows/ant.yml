@@ -4,7 +4,7 @@ name: Multi-OS Testing - RutviPanchal
 on:
   push:
     branches:
-      - master
+      [main]
 
 jobs:
 
