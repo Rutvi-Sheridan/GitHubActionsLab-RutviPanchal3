@@ -1,0 +1,48 @@
+# This workflow will build a Java project with Ant
+name: Multi-OS Testing - RutviPanchal
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+
+  test-ubuntu:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Testing on Ubuntu
+        run: echo "Testing on Ubuntu..."
+
+      - name: Display OS Information
+        run: uname -a
+
+      - name: Create Ubuntu Test File
+        run: echo "Ubuntu test by Rutvi Panchal" > test-ubuntu.txt
+
+      - name: Display File Contents
+        run: cat test-ubuntu.txt
+
+      - name: Complete Ubuntu Test
+        run: echo "Ubuntu tests completed"
+
+  test-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Testing on Windows
+        run: echo "Testing on Windows..."
+
+      - name: Display OS Information
+        run: systeminfo
+
+      - name: Create Windows Test File
+        run: echo Windows test by Rutvi Panchal > test-windows.txt
+
+      - name: Display File Contents
+        run: type test-windows.txt
+
+      - name: Complete Windows Test
+        run: echo "Windows tests completed"
+
